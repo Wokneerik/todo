@@ -18,11 +18,6 @@ const sessions = new LocalSession({database: 'session_db.json'})
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      // host: 'ec2-34-241-82-91.eu-west-1.compute.amazonaws.com',
-      // port: 5432,
-      // database: 'dru7mog8r16oh',
-      // username: 'hgoqyvrofzuuxm',
-      // password: '698a14e410139528f2f9c284e7e3e1c122224df2502abe8c08ea61069e3fb18b',
       url: process.env.DATABASE_URL,
       ssl: {
         rejectUnauthorized: false,
