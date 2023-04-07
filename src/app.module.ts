@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common'
+import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { TelegrafModule } from 'nestjs-telegraf'
 import { AppService } from './app.service'
@@ -13,6 +14,7 @@ import { TaskEntity } from './task.entity'
       // middlewares: [sessions.middleware()],
       token: String(process.env.BOT_TOKEN)
     }),
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
       // host: 'ec2-34-241-82-91.eu-west-1.compute.amazonaws.com',
