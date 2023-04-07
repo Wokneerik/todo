@@ -17,11 +17,11 @@ const sessions = new LocalSession({database: 'session_db.json'})
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'ec2-54-155-46-64.eu-west-1.compute.amazonaws.com',
+      host: 'ec2-34-241-82-91.eu-west-1.compute.amazonaws.com',
       port: 5432,
-      database: 'd20d78k8i63obc',
-      username: 'qluhcvgduzbwjh',
-      password: 'e0894c646e4370b2ce74bb0d79f6091fd520e327478b633130d24739a3268eee',
+      database: 'dru7mog8r16oh',
+      username: 'hgoqyvrofzuuxm',
+      password: '698a14e410139528f2f9c284e7e3e1c122224df2502abe8c08ea61069e3fb18b',
       entities: [join(__dirname, '**', '*.entity.{ts,js}')],
       synchronize: true,
       dropSchema: true
