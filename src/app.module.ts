@@ -2,17 +2,16 @@ import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { TelegrafModule } from 'nestjs-telegraf'
-import LocalSession from 'telegraf-session-local'
 import { AppService } from './app.service'
 import { AppUpdate } from './app.update'
 import { TaskEntity } from './task.entity'
 
-const sessions = new LocalSession({database: 'session_db.json'})
+// const sessions = new LocalSession({database: 'session_db.json'})
 
 @Module({
   imports: [
     TelegrafModule.forRoot({
-      middlewares: [sessions.middleware()],
+      // middlewares: [sessions.middleware()],
       token: String(process.env.BOT_TOKEN)
     }),
     ConfigModule.forRoot(),
